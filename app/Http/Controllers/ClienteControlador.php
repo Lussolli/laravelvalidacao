@@ -40,7 +40,7 @@ class ClienteControlador extends Controller
             'nome' => 'required|min:3|max:20|unique:clientes',
             'idade' => 'required',
             'endereco' => 'required',
-            'email' => 'required'
+            'email' => 'required|email'
         ]);
 
         $cliente = new Cliente();
