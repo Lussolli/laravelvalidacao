@@ -45,12 +45,21 @@
                                 </div>
                             </form>
                         </div>
+                        @if ($errors->any())
+                            <div class="card-footer">
+                                @foreach ($errors->all() as $error)
+                                    <div class="alert alert-danger" role="alert">
+                                        {{ $error }}
+                                    </div>
+                                @endforeach
+                            </div>
+                        @endif
                     </div>
                 </div>
             </div>
         </div>
     </main>
-    
+
     <script src="{{ asset('js/app.js') }}"></script>
 </body>
 </html>
