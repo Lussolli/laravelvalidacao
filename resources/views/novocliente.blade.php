@@ -22,6 +22,7 @@
                         </div>
                         <div class="card-body">
                             <form action="/cliente" method="POST">
+                                @csrf
                                 <div class="form-group">
                                     <label for="nome">Nome do cliente</label>
                                     <input type="text" class="form-control" name="nome" id="nome" autofocus>

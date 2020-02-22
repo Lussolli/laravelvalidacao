@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Cliente;
 
 class ClienteControlador extends Controller
 {
@@ -13,7 +14,8 @@ class ClienteControlador extends Controller
      */
     public function index()
     {
-        //
+        $clientes = Cliente::all();
+        return view('clientes', compact('clientes'));
     }
 
     /**
@@ -23,7 +25,7 @@ class ClienteControlador extends Controller
      */
     public function create()
     {
-        //
+        return view('novocliente');
     }
 
     /**
@@ -34,7 +36,13 @@ class ClienteControlador extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $cliente = new Cliente();
+        $cliente->nome = $request->input('nome');
+        $cliente->idade = $request->input('idade');
+        $cliente->endereco = $request->input('endereco');
+        $cliente->email = $request->input('email');
+        $cliente->save();
+        return redirect('/');
     }
 
     /**
