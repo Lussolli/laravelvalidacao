@@ -21,7 +21,7 @@
                             </div>
                         </div>
                         <div class="card-body">
-                            <table id="tabelaclientes" class="table table-responsive table-bordered table-hover">
+                            <table id="tabelaclientes" class="table table-bordered table-hover">
                                 <thead>
                                     <tr>
                                         <th>Código</th>
